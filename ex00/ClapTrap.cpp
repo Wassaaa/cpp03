@@ -1,0 +1,88 @@
+#include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(std::string name) : name(name), hitpoints(10), energy(10), dmg(0)
+{
+	std::cout << "Default constructor called\n";
+}
+
+// copy constructor
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+	std::cout << "Copy Constructor called\n";
+	name = other.name;
+	hitpoints = other.hitpoints;
+	energy = other.energy;
+	dmg = other.dmg;
+}
+
+// copy assignment op
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	std::cout << "Copy Assignment Operator called\n";
+	if (this == &other)
+		return (*this);
+	name = other.name;
+	hitpoints = other.hitpoints;
+	energy = other.energy;
+	dmg = other.dmg;
+	return (*this);
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "Destructor called\n";
+}
+
+void ClapTrap::status(void)
+{
+	std::cout << "| " << name << " | HITPOINTS: " << hitpoints << " | ENERGY: " << energy << " |\n";
+}
+
+bool ClapTrap::validateAction(void)
+{
+	if (energy < 1)
+	{
+		std::cout << "I'm out of energy\n";
+		return false;
+	}
+	if (hitpoints < 1)
+	{
+		std::cout << "ClapTrap " << name << " is dead!\n";
+		return false;
+	}
+	return true;
+}
+
+void ClapTrap::attack(const std::string &target)
+{
+	if (validateAction())
+	{
+		energy -= 1;
+		std::cout << "ClapTrap " << name << " attacks " << target << " causing " << dmg << " points of damage!\n";
+	}
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	if (hitpoints < 1)
+	{
+		std::cout << "ClapTrap " << name << " is already dead!\n";
+		return ;
+	}
+	hitpoints -= amount;
+	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!\n";
+	if (hitpoints < 1)
+		std::cout << "ClapTrap " << name << " died!\n";
+	status();
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	if (validateAction())
+	{
+		energy -= 1;
+		hitpoints += amount;
+		std::cout << "ClapTrap " << name << " repairs " << amount << " hitpoints!\n";
+		status();
+	}
+}
