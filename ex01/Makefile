@@ -6,11 +6,11 @@
 #    By: aklein <aklein@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/16 17:15:14 by aklein            #+#    #+#              #
-#    Updated: 2024/07/09 00:26:37 by aklein           ###   ########.fr        #
+#    Updated: 2024/07/10 21:43:32 by aklein           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = scavtrap
 
 CC					=	c++
 CC_STRICT 			=	$(CC) $(CCF_STRICT)
