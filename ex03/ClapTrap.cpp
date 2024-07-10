@@ -36,7 +36,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::status(void)
 {
-	std::cout << "| " << name << " | HITPOINTS: " << hitpoints << " | ENERGY: " << energy << " |\n";
+	std::cout << "| " << name << " | HITPOINTS: " << hitpoints << " | ENERGY: " << energy << " | DMG: " << dmg << " |\n";
 }
 
 bool ClapTrap::validateAction(void)
