@@ -2,7 +2,7 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap " << getName() << " created.\n";
+	std::cout << "ScavTrap Default constructor called\n";
 	setHitpoints(100);
 	setEnergy(50);
 	setDmg(20);
@@ -27,7 +27,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap " << getName() << " destroyed.\n";
+	std::cout << "ScavTrap destructor called\n";
 }
 
 void ScavTrap::attack(const std::string& target)

@@ -3,7 +3,7 @@
 
 int main() {
 	std::cout << "Creating ClapTrap object:\n";
-	ClapTrap claptrap("Titus");
+	ClapTrap claptrap("Clappy");
 	std::cout << "Creating ScavTrap object:\n";
 	ScavTrap scavtrap("Scavvy");
 
@@ -22,6 +22,5 @@ int main() {
 	std::cout << "ScavTrap being repaired:\n";
 	scavtrap.beRepaired(20);
 
-	std::cout << "End of main function:\n";
 	return 0;
 }
