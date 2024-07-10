@@ -10,14 +10,31 @@ int main() {
 	diamond.takeDamage(30);
 	diamond.beRepaired(20);
 	diamond.whoAmI();
+	diamond.guardGate();
+	diamond.highFivesGuys();
 
-	std::cout << "\nTesting copy and assignment:\n";
 	std::cout << "Creating DiamondTrap copy from diamond:\n";
 	DiamondTrap diamondCopy(diamond);
+	diamondCopy.status();
+	std::cout << "\nTesting DiamondCopy actions:\n";
+	diamondCopy.attack("Enemy");
+	diamondCopy.takeDamage(30);
+	diamondCopy.beRepaired(20);
+	diamondCopy.whoAmI();
+	diamondCopy.guardGate();
+	diamondCopy.highFivesGuys();
 
 	std::cout << "Assigning DiamondTrap copy to new object:\n";
 	DiamondTrap anotherDiamond("AnotherDiamond");
-	anotherDiamond = diamond;
+	diamond = anotherDiamond;
+	std::cout << "\nTesting diamond reassignment (back to default) actions:\n";
+	diamond.status();
+	diamond.attack("Enemy");
+	diamond.takeDamage(30);
+	diamond.beRepaired(20);
+	diamond.whoAmI();
+	diamond.guardGate();
+	diamond.highFivesGuys();
 
 	std::cout << "\nEnd of main function:\n";
 	return 0;
