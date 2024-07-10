@@ -14,6 +14,9 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	bool validateAction();
+	void status(void);
+
 	std::string getName(void) const;
 	void setName(const std::string name);
 	int getHitpoints(void) const;
@@ -28,10 +31,6 @@ private:
 	int			hitpoints;
 	int			energy;
 	int			dmg;
-
-	bool validateAction();
-	void status(void);
-
 };
 
 #endif
