@@ -14,16 +14,14 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	bool validateAction();
+	void status(void);
 
 private:
 	std::string	name;
 	int			hitpoints;
 	int			energy;
 	int			dmg;
-
-	bool validateAction();
-	void status(void);
-
 };
 
 #endif
