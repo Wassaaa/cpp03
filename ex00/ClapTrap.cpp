@@ -58,7 +58,7 @@ void ClapTrap::attack(const std::string &target)
 	if (validateAction())
 	{
 		energy -= 1;
-		std::cout << "ClapTrap " << name << " attacks " << target << " causing " << dmg << " points of damage!\n";
+		std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << dmg << " points of damage!\n";
 	}
 }
 
