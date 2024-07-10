@@ -86,3 +86,43 @@ void ClapTrap::beRepaired(unsigned int amount)
 		status();
 	}
 }
+
+std::string ClapTrap::getName(void) const
+{
+	return (name);
+}
+
+void ClapTrap::setName(const std::string name)
+{
+	this->name = name;
+}
+
+int ClapTrap::getHitpoints(void) const
+{
+	return (hitpoints);
+}
+
+void ClapTrap::setHitpoints(const int hitpoints)
+{
+	this->hitpoints = hitpoints;
+}
+
+int ClapTrap::getEnergy(void) const
+{
+	return (energy);
+}
+
+void ClapTrap::setEnergy(const int energy)
+{
+	this->energy = energy;
+}
+
+int ClapTrap::getDmg(void) const
+{
+	return (dmg);
+}
+
+void ClapTrap::setDmg(const int dmg)
+{
+	this->dmg = dmg;
+}

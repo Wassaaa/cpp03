@@ -14,6 +14,14 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	std::string getName(void) const;
+	void setName(const std::string name);
+	int getHitpoints(void) const;
+	void setHitpoints(const int hitpoints);
+	int getEnergy(void) const;
+	void setEnergy(const int energy);
+	int getDmg(void) const;
+	void setDmg(const int dmg);
 
 private:
 	std::string	name;
