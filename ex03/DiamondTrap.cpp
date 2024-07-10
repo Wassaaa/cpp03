@@ -4,9 +4,9 @@ DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
 {
 	std::cout << "DiamondTrap constructor called!\n";
-	this->setHitpoints(FragTrap::getHitpoints());
-	this->setEnergy(ScavTrap::getEnergy());
-	this->setDmg(FragTrap::getDmg());
+	this->setHitpoints(FragTrap::DEFAULT_HITPOINTS);
+	this->setEnergy(ScavTrap::DEFAULT_ENERGY);
+	this->setDmg(FragTrap::DEFAULT_ATTACK_DAMAGE);
 }
 
 //copy constructor
