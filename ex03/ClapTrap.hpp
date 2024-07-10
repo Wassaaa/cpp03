@@ -26,6 +26,10 @@ public:
 	int getDmg(void) const;
 	void setDmg(const int dmg);
 
+	static const int DEFAULT_HITPOINTS = 10;
+	static const int DEFAULT_ENERGY = 10;
+	static const int DEFAULT_ATTACK_DAMAGE = 0;
+
 private:
 	std::string	name;
 	int			hitpoints;

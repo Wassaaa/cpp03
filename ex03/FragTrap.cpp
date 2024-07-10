@@ -3,9 +3,9 @@
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "FragTrap Default constructor called\n";
-	setHitpoints(100);
-	setEnergy(100);
-	setDmg(30);
+	this->setHitpoints(DEFAULT_HITPOINTS);
+	this->setEnergy(DEFAULT_ENERGY);
+	this->setDmg(DEFAULT_ATTACK_DAMAGE);
 }
 
 //copy constructor

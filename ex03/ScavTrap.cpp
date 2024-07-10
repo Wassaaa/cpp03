@@ -3,9 +3,9 @@
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap Default constructor called\n";
-	setHitpoints(DEFAULT_HITPOINTS);
-	setEnergy(DEFAULT_ENERGY);
-	setDmg(DEFAULT_ATTACK_DAMAGE);
+	this->setHitpoints(DEFAULT_HITPOINTS);
+	this->setEnergy(DEFAULT_ENERGY);
+	this->setDmg(DEFAULT_ATTACK_DAMAGE);
 }
 
 //copy constructor

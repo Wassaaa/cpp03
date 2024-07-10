@@ -13,7 +13,9 @@ public:
 
 	void highFivesGuys(void);
 
-
+	static const int DEFAULT_HITPOINTS = 100;
+	static const int DEFAULT_ENERGY = 100;
+	static const int DEFAULT_ATTACK_DAMAGE = 30;
 private:
 
 };
