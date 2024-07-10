@@ -9,7 +9,7 @@ public:
 	FragTrap(std::string name);
 	FragTrap(const FragTrap& other);
 	FragTrap& operator=(const FragTrap& other);
-	~FragTrap();
+	virtual ~FragTrap();
 
 	void highFivesGuys(void);
 
