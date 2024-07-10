@@ -1,22 +1,27 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-
-int main(void) {
+int main() {
+	std::cout << "Creating ClapTrap object:\n";
 	ClapTrap claptrap("Titus");
-	ClapTrap claptrap2(claptrap);
-	ClapTrap claptrap3("test");
-	claptrap3 = claptrap;
+	std::cout << "Creating ScavTrap object:\n";
+	ScavTrap scavtrap("Scavvy");
 
+	std::cout << "ClapTrap attacking:\n";
 	claptrap.attack("Enemy");
-	claptrap.takeDamage(5);
-	claptrap.beRepaired(5);
-	claptrap.beRepaired(5);
-	claptrap.takeDamage(5);
-	claptrap.takeDamage(5);
-	claptrap.takeDamage(5);
-	claptrap.takeDamage(5);
-	claptrap.beRepaired(5);
-	claptrap3.beRepaired(55);
-	claptrap3.takeDamage(123);
+
+	std::cout << "ScavTrap attacking:\n";
+	scavtrap.attack("Enemy");
+
+	std::cout << "ScavTrap using guardGate:\n";
+	scavtrap.guardGate();
+
+	std::cout << "ScavTrap taking damage:\n";
+	scavtrap.takeDamage(30);
+
+	std::cout << "ScavTrap being repaired:\n";
+	scavtrap.beRepaired(20);
+
+	std::cout << "End of main function:\n";
 	return 0;
 }
