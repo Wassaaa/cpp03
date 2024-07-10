@@ -1,7 +1,8 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-int main() {
+int main()
+{
 	std::cout << "Creating ClapTrap object:\n";
 	ClapTrap claptrap("Clappy");
 	std::cout << "Creating ScavTrap object:\n";

@@ -1,6 +1,7 @@
 #include "DiamondTrap.hpp"
 
-int main() {
+int main()
+{
 	std::cout << "Creating DiamondTrap object:\n";
 	DiamondTrap diamond("Diamond");
 	diamond.status();

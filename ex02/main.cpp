@@ -2,7 +2,8 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main() {
+int main()
+{
 	std::cout << "Creating ClapTrap object:\n";
 	ClapTrap claptrap("Titus");
 	std::cout << "\nCreating ScavTrap object:\n";
