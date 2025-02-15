@@ -3,13 +3,13 @@
 ClapTrap::ClapTrap(std::string name)
 	: name(name), hitpoints(DEFAULT_HITPOINTS), energy(DEFAULT_ENERGY), dmg(DEFAULT_ATTACK_DAMAGE)
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "Claptrap Default constructor called\n";
 }
 
 // copy constructor
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	std::cout << "Copy Constructor called\n";
+	std::cout << "Claptrap Copy Constructor called\n";
 	name = other.name;
 	hitpoints = other.hitpoints;
 	energy = other.energy;
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 // copy assignment op
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "Copy Assignment Operator called\n";
+	std::cout << "Claptrap Copy Assignment Operator called\n";
 	if (this == &other)
 		return (*this);
 	name = other.name;
@@ -31,7 +31,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "Claptrap Destructor called\n";
 }
 
 void ClapTrap::status(void)
@@ -43,7 +43,7 @@ bool ClapTrap::validateAction(void)
 {
 	if (energy < 1)
 	{
-		std::cout << "I'm out of energy\n";
+		std::cout << "ClapTrap " << name << " is out of Energy!\n";
 		return false;
 	}
 	if (hitpoints < 1)
@@ -73,7 +73,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 	hitpoints -= amount;
 	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!\n";
 	if (hitpoints < 1)
+	{
 		std::cout << "ClapTrap " << name << " died!\n";
+		hitpoints = 0;
+	}
 	status();
 }
 

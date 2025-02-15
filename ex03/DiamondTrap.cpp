@@ -21,10 +21,12 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
 	if (this != &other)
 	{
-		std::cout << "DiamondTrap copy assignment operator called!\n";
 		ClapTrap::operator=(other);
+		ScavTrap::operator=(other);
+		FragTrap::operator=(other);
 		this->name = other.name;
 	}
+	std::cout << "DiamondTrap copy assignment operator called!\n";
 	return *this;
 }
 
